@@ -2,9 +2,9 @@
 name = "entropy"
 description = "Calculates the Shannon entropy of arrays of bytes and strings"
 license = "MIT"
-version = "0.2.0"
+version = "0.2.1"
 repository = "https://github.com/rmbreak/entropy"
-homepage = "https://github.com/rmbreak/entropy"
+documentation = "https://docs.rs/entropy/"
 authors = ["Mack Stump <mack.stump@gmail.com>"]
 
 [dependencies]
