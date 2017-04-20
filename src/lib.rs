@@ -1,3 +1,13 @@
+/// Calculates the Shannon entropy of a byte string.
+///
+/// # Examples
+///
+/// ```
+/// use entropy::shannon_entropy;
+///
+/// let h = shannon_entropy(b"hello, world");
+/// assert_eq!(h, 3.0220551);
+/// ```
 pub fn shannon_entropy(bytes: &[u8]) -> f32 {
     let mut entropy = 0.0;
     let mut counts = [0; 256];
