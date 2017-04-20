@@ -1,5 +1,7 @@
 [package]
 name = "entropy"
+description = "Calculates the Shannon entropy of arrays of bytes and strings"
+license = "MIT"
 version = "0.1.0"
 authors = ["Mack Stump <mack.stump@gmail.com>"]
 
