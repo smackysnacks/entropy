@@ -26,6 +26,12 @@ pub fn shannon_entropy(bytes: &[u8]) -> f32 {
     entropy
 }
 
+pub fn metric_entropy(bytes: &[u8]) -> f32 {
+    let h = shannon_entropy(bytes);
+
+    h / (bytes.len() as f32)
+}
+
 #[cfg(test)]
 mod tests {
     use super::shannon_entropy;
