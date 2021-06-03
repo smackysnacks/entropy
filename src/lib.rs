@@ -5,10 +5,11 @@
 /// # Examples
 ///
 /// ```
-/// use entropy::shannon_entropy;
-///
-/// let h = shannon_entropy(b"hello, world");
-/// assert_eq!(h, 3.0220551);
+/// # use entropy::shannon_entropy;
+/// let h1 = shannon_entropy(b"hello, world");
+/// let h2 = shannon_entropy("hello, world");
+/// assert_eq!(h1, 3.0220551);
+/// assert_eq!(h2, 3.0220551);
 /// ```
 pub fn shannon_entropy<T: AsRef<[u8]>>(data: T) -> f32 {
     let bytes = data.as_ref();
