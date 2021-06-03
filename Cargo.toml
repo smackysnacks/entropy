@@ -8,7 +8,7 @@ license = "MIT"
 name = "entropy"
 readme = "README.md"
 repository = "https://github.com/rmbreak/entropy"
-version = "0.4.0"
+version = "0.4.1"
 
 [dependencies]
 

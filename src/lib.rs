@@ -10,7 +10,8 @@
 /// let h = shannon_entropy(b"hello, world");
 /// assert_eq!(h, 3.0220551);
 /// ```
-pub fn shannon_entropy(bytes: &[u8]) -> f32 {
+pub fn shannon_entropy<T: AsRef<[u8]>>(data: T) -> f32 {
+    let bytes = data.as_ref();
     let mut entropy = 0.0;
     let mut counts = [0; 256];
 
@@ -30,9 +31,9 @@ pub fn shannon_entropy(bytes: &[u8]) -> f32 {
     entropy
 }
 
-pub fn metric_entropy(bytes: &[u8]) -> f32 {
+pub fn metric_entropy<T: AsRef<[u8]>>(data: T) -> f32 {
+    let bytes = data.as_ref();
     let h = shannon_entropy(bytes);
-
     h / (bytes.len() as f32)
 }
 

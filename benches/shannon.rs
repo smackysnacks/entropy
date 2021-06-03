@@ -2,7 +2,10 @@ use criterion::{black_box, criterion_group, criterion_main, Criterion};
 use entropy::shannon_entropy;
 
 pub fn criterion_benchmark(c: &mut Criterion) {
-    let input = br#"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, odio
+    c.bench_function("shannon_long", |b| {
+        b.iter(|| {
+            let input =
+                br#"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, odio
 quis porta tincidunt, odio arcu scelerisque mauris, eu lobortis mi felis nec
 nunc. Donec et hendrerit ligula. Phasellus odio tellus, eleifend et libero sit
 amet, hendrerit bibendum augue. Nunc sit amet accumsan sapien, in porta risus.
@@ -35,8 +38,9 @@ faucibus eget. Duis a ultricies ipsum. Nam a arcu tortor. Nulla viverra turpis
 eget nisi ullamcorper dictum. Sed elementum, felis quis convallis vestibulum,
 magna libero pulvinar ante, eget posuere magna justo blandit neque. Proin
 aliquam hendrerit sodales."#;
-
-    c.bench_function("shannon_long", |b| b.iter(|| shannon_entropy(black_box(input))));
+            shannon_entropy(black_box(input));
+        })
+    });
 }
 
 criterion_group!(benches, criterion_benchmark);
