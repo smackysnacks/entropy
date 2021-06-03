@@ -1,3 +1,5 @@
+#![warn(rust_2018_idioms)]
+
 /// Calculates the Shannon entropy of a byte string.
 ///
 /// # Examples
@@ -16,8 +18,10 @@ pub fn shannon_entropy(bytes: &[u8]) -> f32 {
         counts[b as usize] += 1;
     }
 
-    for &count in counts.iter() {
-        if count == 0 { continue }
+    for &count in &counts {
+        if count == 0 {
+            continue;
+        }
 
         let p: f32 = (count as f32) / (bytes.len() as f32);
         entropy -= p * p.log(2.0);
@@ -79,8 +83,8 @@ mod tests {
 
     #[test]
     fn test_entropy_equal_distribution2() {
-        let mut bytes = [0u8; 256*2];
-        for i in 0..256*2 {
+        let mut bytes = [0u8; 256 * 2];
+        for i in 0..256 * 2 {
             bytes[i] = (i % 256) as u8;
         }
 
