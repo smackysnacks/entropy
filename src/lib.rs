@@ -14,7 +14,7 @@
 pub fn shannon_entropy<T: AsRef<[u8]>>(data: T) -> f32 {
     let bytes = data.as_ref();
     let mut entropy = 0.0;
-    let mut counts = [0; 256];
+    let mut counts = [0usize; 256];
 
     for &b in bytes {
         counts[b as usize] += 1;

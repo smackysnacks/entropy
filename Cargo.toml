@@ -3,17 +3,17 @@ authors = ["Mack Stump <mack.stump@gmail.com>"]
 description = "Calculates the Shannon entropy of arrays of bytes and strings"
 documentation = "https://docs.rs/entropy/"
 edition = "2018"
-homepage = "https://github.com/rmbreak/entropy"
+homepage = "https://github.com/smackysnacks/entropy"
 license = "MIT"
 name = "entropy"
 readme = "README.md"
-repository = "https://github.com/rmbreak/entropy"
-version = "0.4.1"
+repository = "https://github.com/smackysnacks/entropy"
+version = "0.4.2"
 
 [dependencies]
 
 [dev-dependencies]
-criterion = "0.3"
+criterion = "0.5.1"
 
 [[bench]]
 harness = false
