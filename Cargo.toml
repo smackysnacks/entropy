@@ -1,5 +1,5 @@
 [package]
-authors = ["Mack Stump <mack.stump@gmail.com>"]
+authors = ["Mack Stump <mack@mackstump.com"]
 description = "Calculates the Shannon entropy of arrays of bytes and strings"
 documentation = "https://docs.rs/entropy/"
 edition = "2018"
@@ -9,6 +9,14 @@ name = "entropy"
 readme = "README.md"
 repository = "https://github.com/smackysnacks/entropy"
 version = "0.4.2"
+categories = ["algorithms"]
+keywords = [
+  "entropy",
+  "shannon",
+  "information-theory",
+  "randomness",
+  "compression",
+]
 
 [dependencies]
 
