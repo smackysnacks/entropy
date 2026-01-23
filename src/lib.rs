@@ -43,7 +43,7 @@
 ///
 /// # Returns
 ///
-/// The Shannon entropy in bits as an `f32`. Returns `0.0` for empty input.
+/// The Shannon entropy in bits. Returns `0.0` for empty input.
 ///
 /// # Examples
 ///
