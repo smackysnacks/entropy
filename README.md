@@ -1,10 +1,11 @@
 # entropy
 
 [![Crates.io](https://img.shields.io/crates/v/entropy.svg)](https://crates.io/crates/entropy)
+[![Crates.io Total Downloads](https://img.shields.io/crates/d/entropy)](https://crates.io/crates/entropy)
 [![Documentation](https://docs.rs/entropy/badge.svg)](https://docs.rs/entropy)
 [![License](https://img.shields.io/crates/l/entropy.svg)](https://github.com/smackysnacks/entropy#license)
 
-A Rust library for calculating Shannon entropy and metric entropy of byte sequences.
+A Rust library for calculating Shannon entropy of byte sequences.
 
 ## Installation
 
@@ -18,7 +19,7 @@ entropy = "0.4"
 ## Usage
 
 ```rust
-use entropy::{shannon_entropy, metric_entropy};
+use entropy::shannon_entropy;
 
 // Calculate Shannon entropy (in bits)
 let h = shannon_entropy("hello, world");
@@ -26,10 +27,6 @@ assert_eq!(h, 3.0220551);
 
 // Works with byte slices too
 let h = shannon_entropy(b"\x00\x01\x02\x03");
-
-// Calculate metric entropy (shannon_entropy / input.len())
-let m = metric_entropy("hello, world");
-assert_eq!(m, 0.25183794);
 ```
 
 ## What is Shannon Entropy?
